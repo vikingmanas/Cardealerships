@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+    font-family: 'Courgette', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+h1, h2, h3, p {
+    color: #ffffff;
+}
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #121212;
+    z-index: 9999;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links a {
+    margin: 0 15px;
+    color: #ffffff;
+}
+
+/* Header */
+.header {
+    background-image: url('images/header-background.jpg');
+    background-size: cover;
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+}
+
+.cta-button {
+    background-color: #ff5733;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Skills Section */
+.skills {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    text-align: center;
+}
+
+.skill-item {
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Inventory Section */
+.inventory {
+    padding: 60px 20px;
+    background-color: #121212;
+}
+
+.inventory-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.car-card {
+    background: #1c1c1c;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    color: #ffffff;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.car-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 87, 51, 0.4);
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+}
+
+/* Footer */
+footer {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
