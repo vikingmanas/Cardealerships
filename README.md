@@ -8,6 +8,24 @@ The **Online Car Dealership System** is a web-based platform where users (buyers
 - **Inventory Management**: Add, update, and remove cars.
 - **Transactions**: Complete transactions between users and dealerships.
 - **Role Management**: Users have different roles with different permissions.
+## Project Structure
+
+```plaintext
+online-car-dealership/
+    ├── src/
+    │    ├── com/
+    │    │    ├── cardealership/
+    │    │    │    ├── Car.java
+    │    │    │    ├── CarDAO.java
+    │    │    │    ├── InventoryDAO.java
+    │    │    │    └── DBConnection.java
+    ├── lib/
+    │    └── mysql-connector-java-x.x.x.jar (MySQL JDBC Driver)
+    ├── assets/
+    │    └── database-connection-success.png
+    ├── .gitignore
+    ├── README.md
+    └── Main.java
 
 ## Features
 
@@ -52,21 +70,4 @@ CREATE TABLE Vehicles (
     vin VARCHAR(20) UNIQUE NOT NULL
 );
 
-## Project Structure
 
-```plaintext
-online-car-dealership/
-    ├── src/
-    │    ├── com/
-    │    │    ├── cardealership/
-    │    │    │    ├── Car.java
-    │    │    │    ├── CarDAO.java
-    │    │    │    ├── InventoryDAO.java
-    │    │    │    └── DBConnection.java
-    ├── lib/
-    │    └── mysql-connector-java-x.x.x.jar (MySQL JDBC Driver)
-    ├── assets/
-    │    └── database-connection-success.png
-    ├── .gitignore
-    ├── README.md
-    └── Main.java
