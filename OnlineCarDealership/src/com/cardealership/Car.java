@@ -8,7 +8,7 @@ public class Car {
     private int year;
     private double price;
 
-    // Constructor
+    
     public Car(int id, String make, String model, int year, double price) {
         this.id = id;
         this.make = make;
@@ -17,7 +17,7 @@ public class Car {
         this.price = price;
     }
 
-    // Getters and Setters
+    
     public int getId() {
         return id;
     }
