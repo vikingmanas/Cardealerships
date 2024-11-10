@@ -1,4 +1,3 @@
-Here’s the complete Markdown code for the entire README:
 
 # 🚗 **Online Car Dealership System**
 
