@@ -29,7 +29,7 @@ The **Online Car Dealership System** is a web-based platform where users (buyers
 - **MySQL** as the database.
 - **VS Code** as the development environment.
 - **MySQL JDBC Driver** for connecting to MySQL from Java.
-
+![Database Connection Successful](./assets/database-connection-success.png)
 ## Project Structure
 
 ```plaintext
