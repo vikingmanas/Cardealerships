@@ -29,7 +29,24 @@ The **Online Car Dealership System** is a web-based platform where users (buyers
 - **MySQL** as the database.
 - **VS Code** as the development environment.
 - **MySQL JDBC Driver** for connecting to MySQL from Java.
-![Database Connection Successful](./assets/database-connection-success.png)
+  ## Database Schema
+
+This project uses a MySQL database to store data related to vehicles, users, dealerships, and transactions. Below is the schema design for the database:
+
+### Vehicles Table
+```sql
+CREATE TABLE Vehicles (
+    vehicle_id INT PRIMARY KEY AUTO_INCREMENT,
+    make VARCHAR(50) NOT NULL,
+    model VARCHAR(50) NOT NULL,
+    year INT NOT NULL,
+    mileage INT NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    description TEXT,
+    images TEXT,
+    vin VARCHAR(20) UNIQUE NOT NULL
+);
+
 ## Project Structure
 
 ```plaintext
