@@ -118,25 +118,3 @@ online-car-dealership/
     ├── .gitignore
     ├── README.md
     └── Main.java
-
-🏁 How to Run the Project
-
-	1.	Clone the Repository
-Clone this repository to your local machine using the following command:
-
-git clone https://github.com/your-username/online-car-dealership.git
-
-
-	2.	Set Up MySQL Database
-Ensure you have MySQL installed and running on your machine.
-	•	Update the DBConnection.java file with your MySQL credentials.
-	3.	Import Project in IDE
-Open the project in your preferred IDE (e.g., VS Code).
-	4.	Run the Application
-Run the Main.java file to see the application in action and confirm the database connection.
-
-🚨 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-This **Markdown** code contains the complete project information, including the project description, features, technologies used, database schema, project structure, and instructions on how to run the project.
