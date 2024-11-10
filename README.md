@@ -1,62 +1,56 @@
-# Online Car Dealership System
+# 🚗 **Online Car Dealership System**
 
-## Project Description
+## 📜 **Project Description**
 
-The **Online Car Dealership System** is a web-based platform where users (buyers, dealers, admins) can interact to browse, sell, and buy vehicles. The system supports:
+Welcome to the **Online Car Dealership System**! This is a web-based platform that connects **buyers**, **dealers**, and **admins** in a seamless car-buying and selling experience. Users can browse, sell, and purchase vehicles efficiently. The system features:
 
-- **Vehicle Search**: Search cars by price range.
-- **Inventory Management**: Add, update, and remove cars.
-- **Transactions**: Complete transactions between users and dealerships.
-- **Role Management**: Users have different roles with different permissions.
-## Project Structure
+- **🔍 Car Search**: Find cars by price range.
+- **🛠️ Inventory Management**: Dealers can add, update, and remove cars.
+- **💳 Transactions**: Secure transactions between buyers and dealerships.
+- **🛡️ Role Management**: Users have distinct roles with permissions.
 
-plaintext
-online-car-dealership/
-    ├── src/
-    │    ├── com/
-    │    │    ├── cardealership/
-    │    │    │    ├── Car.java
-    │    │    │    ├── CarDAO.java
-    │    │    │    ├── InventoryDAO.java
-    │    │    │    └── DBConnection.java
-    ├── lib/
-    │    └── mysql-connector-java-x.x.x.jar (MySQL JDBC Driver)
-    ├── assets/
-    │    └── database-connection-success.png
-    ├── .gitignore
-    ├── README.md
-    └── Main.java
+---
 
-## Features
+## ✨ **Features**
 
-- **User Roles**: 
-    - **Buyer**: Can view cars, make purchases.
-    - **Dealer**: Can manage car inventory and view transactions.
-    - **Admin**: Can manage all aspects of the system.
-  
-- **Car Search by Price**: Users can filter cars within a certain price range.
-  
-- **Transaction Management**: Track purchase transactions between buyers and dealerships.
-  
-- **Database Connection**: Successfully connects to the **MySQL** database.
+- **User Roles**:  
+    - **Buyer**: Browse cars, make purchases.
+    - **Dealer**: Manage car inventory, view transactions.
+    - **Admin**: Oversee all system activities.
 
-## Technologies Used
+- **🔎 Car Search by Price**:  
+  Filter and find cars within your preferred price range.
 
-- **Java (JDK)** for the backend logic.
-- **JDBC** for database connectivity.
-- **MySQL** as the database.
-- **VS Code** as the development environment.
-- **MySQL JDBC Driver** for connecting to MySQL from Java.
-  ![Database Connection Successful](./assets/database-connection-success.png)
+- **💰 Transaction Management**:  
+  Efficiently track and manage car purchase transactions between buyers and dealerships.
 
+- **🔗 Database Connection**:  
+  Connects to **MySQL** database to store vehicle, user, and transaction data.
 
+---
 
-  
-  ## Database Schema
+## 🚀 **Technologies Used**
 
-This project uses a MySQL database to store data related to vehicles, users, dealerships, and transactions. Below is the schema design for the database:
+- **Java (JDK)**: Backend logic.
+- **JDBC**: Database connectivity.
+- **MySQL**: Database management.
+- **VS Code**: Development environment.
+- **MySQL JDBC Driver**: For connecting Java to MySQL.
 
-### Vehicles Table
+---
+
+## 🎨 **Preview of Database Connection**
+
+![Database Connection Successful](./assets/database-connection-success.png)
+
+---
+
+## 🛠️ **Database Schema**
+
+This project uses a MySQL database to store data about vehicles, users, dealerships, and transactions. Below is the schema for each table:
+
+### 🚗 **Vehicles Table**
+
 ```sql
 CREATE TABLE Vehicles (
     vehicle_id INT PRIMARY KEY AUTO_INCREMENT,
