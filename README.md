@@ -10,7 +10,7 @@ The **Online Car Dealership System** is a web-based platform where users (buyers
 - **Role Management**: Users have different roles with different permissions.
 ## Project Structure
 
-```plaintext
+plaintext
 online-car-dealership/
     ├── src/
     │    ├── com/
