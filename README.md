@@ -1,42 +1,36 @@
-
 # 🚗 **Online Car Dealership System**
 
 ## 📜 **Project Description**
 
-Welcome to the **Online Car Dealership System**! This is a web-based platform that connects **buyers**, **dealers**, and **admins** in a seamless car-buying and selling experience. Users can browse, sell, and purchase vehicles efficiently. The system features:
-
-- **🔍 Car Search**: Find cars by price range.
-- **🛠️ Inventory Management**: Dealers can add, update, and remove cars.
-- **💳 Transactions**: Secure transactions between buyers and dealerships.
-- **🛡️ Role Management**: Users have distinct roles with permissions.
+Welcome to the **Online Car Dealership System**! This web-based platform connects **buyers**, **dealers**, and **admins** for a seamless car-buying and selling experience. With intuitive search, secure transactions, and role-specific features, it’s designed for efficient vehicle management and customer satisfaction.
 
 ---
 
 ## ✨ **Features**
 
 - **User Roles**:  
-    - **Buyer**: Browse cars, make purchases.
-    - **Dealer**: Manage car inventory, view transactions.
-    - **Admin**: Oversee all system activities.
+  - **Buyer**: Browse and purchase vehicles.
+  - **Dealer**: Manage vehicle inventory and view transactions.
+  - **Admin**: Oversee system-wide activities.
 
-- **🔎 Car Search by Price**:  
-  Filter and find cars within your preferred price range.
+- **🔍 Car Search by Price**:  
+  Quickly find vehicles within a specific price range.
 
 - **💰 Transaction Management**:  
-  Efficiently track and manage car purchase transactions between buyers and dealerships.
+  Securely track and handle transactions between buyers and dealerships.
 
-- **🔗 Database Connection**:  
-  Connects to **MySQL** database to store vehicle, user, and transaction data.
+- **🔗 Database Integration**:  
+  Uses **MySQL** to store vehicle, user, and transaction data, enabling real-time access and management.
 
 ---
 
 ## 🚀 **Technologies Used**
 
-- **Java (JDK)**: Backend logic.
+- **Java (JDK)**: Backend development.
 - **JDBC**: Database connectivity.
-- **MySQL**: Database management.
+- **MySQL**: Database storage.
 - **VS Code**: Development environment.
-- **MySQL JDBC Driver**: For connecting Java to MySQL.
+- **MySQL JDBC Driver**: Connects Java to MySQL.
 
 ---
 
@@ -48,7 +42,7 @@ Welcome to the **Online Car Dealership System**! This is a web-based platform th
 
 ## 🛠️ **Database Schema**
 
-This project uses a MySQL database to store data about vehicles, users, dealerships, and transactions. Below is the schema for each table:
+The system uses a MySQL database with the following key tables:
 
 ### 🚗 **Vehicles Table**
 
@@ -64,9 +58,11 @@ CREATE TABLE Vehicles (
     images TEXT,
     vin VARCHAR(20) UNIQUE NOT NULL
 );
+```
 
-👤 Users Table
+### 👤 **Users Table**
 
+```sql
 CREATE TABLE Users (
     user_id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(50) UNIQUE NOT NULL,
@@ -76,9 +72,11 @@ CREATE TABLE Users (
     address TEXT,
     role ENUM('buyer', 'dealer', 'admin') DEFAULT 'buyer'
 );
+```
 
-🏢 Dealership Table
+### 🏢 **Dealership Table**
 
+```sql
 CREATE TABLE Dealership (
     dealership_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
@@ -88,9 +86,11 @@ CREATE TABLE Dealership (
     website VARCHAR(100),
     contact_person VARCHAR(100)
 );
+```
 
-💳 Transactions Table
+### 💳 **Transactions Table**
 
+```sql
 CREATE TABLE Transactions (
     transaction_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT NOT NULL,
@@ -100,21 +100,30 @@ CREATE TABLE Transactions (
     payment_method ENUM('cash', 'credit', 'debit', 'loan') NOT NULL,
     total_price DECIMAL(10, 2) NOT NULL
 );
+```
 
-🗂️ Project Structure
+---
 
+## 🗂️ **Project Structure**
+
+```
 online-car-dealership/
-    ├── src/
-    │    ├── com/
-    │    │    ├── cardealership/
-    │    │    │    ├── Car.java
-    │    │    │    ├── CarDAO.java
-    │    │    │    ├── InventoryDAO.java
-    │    │    │    └── DBConnection.java
-    ├── lib/
-    │    └── mysql-connector-java-x.x.x.jar (MySQL JDBC Driver)
-    ├── assets/
-    │    └── database-connection-success.png
-    ├── .gitignore
-    ├── README.md
-    └── Main.java
+├── src/
+│   └── com/
+│       └── cardealership/
+│           ├── Car.java
+│           ├── CarDAO.java
+│           ├── InventoryDAO.java
+│           └── DBConnection.java
+├── lib/
+│   └── mysql-connector-java-x.x.x.jar (MySQL JDBC Driver)
+├── assets/
+│   └── database-connection-success.png
+├── .gitignore
+├── README.md
+└── Main.java
+```
+
+---
+
+With the **Online Car Dealership System**, buying and selling cars has never been easier or more organized. From user roles to seamless transactions, this system is designed to provide an optimal experience for all user.
