@@ -107,22 +107,23 @@ CREATE TABLE Transactions (
 ## 🗂️ **Project Structure**
 
 ```
-online-car-dealership/
+OnlineCarDealership/
 ├── src/
 │   └── com/
 │       └── cardealership/
-│           ├── Car.java
+│           ├── App.java
 │           ├── CarDAO.java
+│           ├── DBConnection.java
 │           ├── InventoryDAO.java
-│           └── DBConnection.java
+│           └── UserManagement/
+│               ├── user-management.html
+│               ├── style.css
+│               └── user-management.js
 ├── lib/
-│   └── mysql-connector-java-x.x.x.jar (MySQL JDBC Driver)
-├── assets/
-│   └── database-connection-success.png
-├── .gitignore
+│   └── mysql-connector-java-8.x.x.jar
+├── pom.xml
 ├── README.md
-└── Main.java
-```
+└── .gitignore
 
 ---
 
