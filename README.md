@@ -126,5 +126,3 @@ OnlineCarDealership/
 └── .gitignore
 
 ---
-
-With the **Online Car Dealership System**, buying and selling cars has never been easier or more organized. From user roles to seamless transactions, this system is designed to provide an optimal experience for all user.
