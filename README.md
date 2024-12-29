@@ -4,11 +4,11 @@
 
 Welcome to the **Online Car Dealership System**! This web-based platform connects **buyers**, **dealers**, and **admins** for a seamless car-buying and selling experience. With intuitive search, secure transactions, and role-specific features, it’s designed for efficient vehicle management and customer satisfaction.
 
----
+---  
 
 ## ✨ **Features**
 
-- **User Roles**:  
+- **User Roles**:
   - **Buyer**: Browse and purchase vehicles.
   - **Dealer**: Manage vehicle inventory and view transactions.
   - **Admin**: Oversee system-wide activities.
@@ -31,7 +31,11 @@ Welcome to the **Online Car Dealership System**! This web-based platform connect
 - **MySQL**: Database storage.
 - **VS Code**: Development environment.
 - **MySQL JDBC Driver**: Connects Java to MySQL.
-
+- **HTML/CSS/JavaScript**: Frontend for user interfaces.
+- **Bootstrap**: Responsive UI design.
+- **jQuery**: Enhance interactivity on the client-side.
+- **AJAX**: Asynchronous data retrieval for a smooth user experience.
+  
 ---
 
 ## 🎨 **Preview of Database Connection**
@@ -58,71 +62,3 @@ CREATE TABLE Vehicles (
     images TEXT,
     vin VARCHAR(20) UNIQUE NOT NULL
 );
-```
-
-### 👤 **Users Table**
-
-```sql
-CREATE TABLE Users (
-    user_id INT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(50) UNIQUE NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    password VARCHAR(100) NOT NULL,
-    phone_number VARCHAR(15),
-    address TEXT,
-    role ENUM('buyer', 'dealer', 'admin') DEFAULT 'buyer'
-);
-```
-
-### 🏢 **Dealership Table**
-
-```sql
-CREATE TABLE Dealership (
-    dealership_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
-    address TEXT NOT NULL,
-    phone_number VARCHAR(15),
-    email VARCHAR(100),
-    website VARCHAR(100),
-    contact_person VARCHAR(100)
-);
-```
-
-### 💳 **Transactions Table**
-
-```sql
-CREATE TABLE Transactions (
-    transaction_id INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT NOT NULL,
-    vehicle_id INT NOT NULL,
-    dealership_id INT NOT NULL,
-    purchase_date DATE NOT NULL,
-    payment_method ENUM('cash', 'credit', 'debit', 'loan') NOT NULL,
-    total_price DECIMAL(10, 2) NOT NULL
-);
-```
-
----
-
-## 🗂️ **Project Structure**
-
-```
-OnlineCarDealership/
-├── src/
-│   └── com/
-│       └── cardealership/
-│           ├── App.java
-│           ├── CarDAO.java
-│           ├── DBConnection.java
-│           ├── InventoryDAO.java
-│           └── UserManagement/
-│               ├── user-management.html
-│               ├── style.css
-│               └── user-management.js
-├── lib/
-│   └── mysql-connector-java-8.x.x.jar
-├── pom.xml
-├── README.md
-└── .gitignore
-
----
