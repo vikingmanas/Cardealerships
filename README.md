@@ -2,40 +2,50 @@
 
 ## 📜 **Project Description**
 
-Welcome to the **Online Car Dealership System**! This web-based platform connects **buyers**, **dealers**, and **admins** for a seamless car-buying and selling experience. With intuitive search, secure transactions, and role-specific features, it’s designed for efficient vehicle management and customer satisfaction.
+The **Online Car Dealership System** is a dynamic web-based platform designed to facilitate car buying and selling. Built using **Maven** for efficient project management and dependency handling, this system connects **buyers**, **dealers**, and **admins** with the goal of providing a smooth car-buying experience. It supports features like intuitive car search, secure transactions, and role-based functionalities for buyers, dealers, and admins.
 
----  
+---
 
 ## ✨ **Features**
 
-- **User Roles**:
-  - **Buyer**: Browse and purchase vehicles.
-  - **Dealer**: Manage vehicle inventory and view transactions.
-  - **Admin**: Oversee system-wide activities.
+- **User Roles**:  
+  - **Buyer**: Browse, view details, and purchase vehicles.
+  - **Dealer**: Manage the vehicle inventory and view transactions.
+  - **Admin**: Oversee system-wide activities and manage user roles.
 
 - **🔍 Car Search by Price**:  
-  Quickly find vehicles within a specific price range.
+  Search for cars within a specified price range and filter by make, model, and year.
 
 - **💰 Transaction Management**:  
-  Securely track and handle transactions between buyers and dealerships.
+  Securely track transactions between buyers and dealers, including various payment methods.
 
 - **🔗 Database Integration**:  
-  Uses **MySQL** to store vehicle, user, and transaction data, enabling real-time access and management.
+  The system uses **MySQL** to manage vehicles, users, dealerships, and transaction data, providing real-time updates.
+
+- **Maven-powered Build**:  
+  The project is built using **Maven**, enabling seamless dependency management, building, and packaging into a **WAR** file for web deployment.
 
 ---
 
 ## 🚀 **Technologies Used**
 
-- **Java (JDK)**: Backend development.
-- **JDBC**: Database connectivity.
-- **MySQL**: Database storage.
-- **VS Code**: Development environment.
-- **MySQL JDBC Driver**: Connects Java to MySQL.
-- **HTML/CSS/JavaScript**: Frontend for user interfaces.
-- **Bootstrap**: Responsive UI design.
-- **jQuery**: Enhance interactivity on the client-side.
-- **AJAX**: Asynchronous data retrieval for a smooth user experience.
+- **Backend**:  
+  - **Java (JDK 8)**: Primary language for backend development.
+  - **JDBC**: Database connectivity to MySQL.
   
+- **Frontend**:  
+  - **HTML, CSS, JavaScript**: For creating interactive and responsive web pages.
+
+- **Database**:  
+  - **MySQL**: For storing vehicle, user, dealership, and transaction data.
+
+- **Build & Dependency Management**:  
+  - **Maven**: Manages project dependencies and automates the build process. Includes dependencies like MySQL connector and Servlet API for the web functionalities.
+
+- **Development Tools**:  
+  - **VS Code**: Code editor for development.
+  - **MySQL Workbench**: For database management.
+
 ---
 
 ## 🎨 **Preview of Database Connection**
@@ -48,17 +58,15 @@ Welcome to the **Online Car Dealership System**! This web-based platform connect
 
 The system uses a MySQL database with the following key tables:
 
-### 🚗 **Vehicles Table**
+### 👤 **Users Table**
 
 ```sql
-CREATE TABLE Vehicles (
-    vehicle_id INT PRIMARY KEY AUTO_INCREMENT,
-    make VARCHAR(50) NOT NULL,
-    model VARCHAR(50) NOT NULL,
-    year INT NOT NULL,
-    mileage INT NOT NULL,
-    price DECIMAL(10, 2) NOT NULL,
-    description TEXT,
-    images TEXT,
-    vin VARCHAR(20) UNIQUE NOT NULL
+CREATE TABLE Users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    phone_number VARCHAR(15),
+    address TEXT,
+    role ENUM('buyer', 'dealer', 'admin') DEFAULT 'buyer'
 );
