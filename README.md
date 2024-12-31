@@ -6,7 +6,7 @@ The **Online Car Dealership System** is a dynamic web-based platform designed to
 
 ---
 
-## ✨ **Features**
+## ✨**Features**
 
 - **User Roles**:  
   - **Buyer**: Browse, view details, and purchase vehicles.
