@@ -61,4 +61,24 @@ public class CarDAO {
             statement.executeUpdate(); 
         }
     }
+
+    public java.util.List<Car> getAllCars() throws SQLException {
+        java.util.List<Car> cars = new java.util.ArrayList<>();
+        String sql = "SELECT * FROM cars ORDER BY id DESC";
+        try (Connection connection = DBConnection.getConnection(); 
+             PreparedStatement statement = connection.prepareStatement(sql);
+             ResultSet resultSet = statement.executeQuery()) {
+            while (resultSet.next()) {
+                Car car = new Car(
+                    resultSet.getInt("id"),
+                    resultSet.getString("make"),
+                    resultSet.getString("model"),
+                    resultSet.getInt("year"),
+                    resultSet.getDouble("price")
+                );
+                cars.add(car);
+            }
+        }
+        return cars;
+    }
 }

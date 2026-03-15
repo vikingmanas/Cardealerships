@@ -6,9 +6,12 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/car_dealership";  // Your database URL
-    private static final String JDBC_USERNAME = "root";  // Your MySQL username
-    private static final String JDBC_PASSWORD = "qwert67890p";  // Your MySQL password
+    // =================================================================================
+    // IMPORTANT: Update these constants with your actual local MySQL credentials!
+    // =================================================================================
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/car_dealership?useSSL=false&serverTimezone=UTC";
+    private static final String JDBC_USERNAME = "root";       // <-- CHANGE THIS to your MySQL username
+    private static final String JDBC_PASSWORD = "password123"; // <-- CHANGE THIS to your MySQL password
 
     // Method to establish a connection to the MySQL database
     public static Connection getConnection() throws SQLException {
